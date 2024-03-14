@@ -1,8 +1,6 @@
 using System.Threading.Tasks;
 using System.Net.Mail;
 using Microsoft.Extensions.Configuration;
-// using SendGrid;
-// using SendGrid.Helpers.Mail;
 using Microsoft.AspNetCore.Mvc;
 using System;
 
@@ -18,6 +16,7 @@ namespace Application.Infrastructure.Email
 
         public bool SendEmailAsync(string userEmail, string emailSubject, string msg)
         {
+
             string fromMail = "filip.soljic@gmail.com";
             string fromPassword = "apkqwmczuxgtjled";
             MailMessage mailMessage = new MailMessage();
@@ -54,5 +53,5 @@ namespace Application.Infrastructure.Email
             }
             return false;
         }
-        }
     }
+}
